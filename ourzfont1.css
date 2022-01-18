@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Numito',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+
+}
+.box{
+    position: relative;
+    width: 150px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box h2{
+    color: #fff;
+    font-size: 3em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px #00b3ff,
+                0 0 20px #00b3ff,
+                0 0 20px #00b3ff,
+                0 0 20px #00b3ff,
+                0 0 20px #00b3ff;
+    top: 60px;
+}
+.lightscroll{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    border-radius: 10px;
+    background: #fff;
+    z-index: 2;
+    box-shadow: 0 0 10px #00b3ff,
+    0 0 10px #00b3ff,
+    0 0 10px #00b3ff,
+    0 0 10px #00b3ff,
+    0 0 120px #00b3ff;
+    animation:animatelightbar 5s linear infinite;
+}
+@keyframes animatelightbar {
+    0%,50%
+    {
+        transform: scaleY(0)translateX(0);
+    }
+    10%
+    {
+        transform: scaleY(1)translateX(0);
+    }
+    90%
+    {
+        transform: scaleY(1)translateX(calc(600px -10px));
+    }
+    95%,100%
+    {
+        transform: scaleY(1)translateX(calc(600px -10px));
+    }
+}
